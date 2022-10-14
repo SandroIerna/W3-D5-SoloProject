@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  background: rgb(209, 215, 246);
+  background: radial-gradient(
+    circle,
+    rgba(209, 215, 246, 1) 0%,
+    rgba(96, 97, 213, 1) 100%
+  );
+}
+
+#quiz-container {
+  max-width: 768px;
+  height: 248px;
+  margin-inline: auto;
+  margin-block-start: 10rem;
+  margin-block-end: 2rem;
+  background-color: beige;
+  padding: 1px;
+  border-radius: 10px;
+}
+
+#starting-block {
+  text-align: center;
+}
+
+.question-container {
+  background-color: rgb(199, 199, 242);
+  width: auto;
+  text-align: center;
+  border: solid 1px black;
+  border-radius: 8px;
+  max-width: 640px;
+  margin-inline: auto;
+  margin-block: 2rem;
+  word-wrap: break-word;
+  pointer-events: none;
+}
+
+.answers-container {
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  border: solid 1px black;
+  border-radius: 8px;
+  width: 40%;
+  margin-inline: 4.7%;
+  margin-block: 1rem;
+  word-wrap: break-word;
+  cursor: pointer;
+  background-color: rgb(223, 223, 233);
+}
+
+#button-container {
+  max-width: 768px;
+  margin-inline: auto;
+  text-align: center;
+  margin-block-end: 2rem;
+}
+
+#button {
+  width: 64px;
+}
+
+.selected {
+  background-color: rgb(164, 158, 158);
+}
+
+.hide {
+  display: none;
+}
