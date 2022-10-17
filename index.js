@@ -100,15 +100,42 @@ let arrayOfAnswers = document.getElementsByClassName("answers-container");
 const arrayOfRightAnswers = [];
 const arrayOfWrongAnswers = [];
 
+let random = function (length) {
+  let array = [];
+  for (let i = 0; i < length; i++) {
+    array.push(i);
+  }
+  let random = array.splice(Math.random() * array.length)[0];
+  return random;
+};
+console.log(questions[1].incorrect_answers);
+
 const nextQuestion = function (x) {
   //   const quizBoard = document.createElement("div");
   //   quizBoard.id = "quiz-container";
   const question = document.createElement("div");
   const questionText = questions[x].question;
-  const correctAnswerText = questions[x].correct_answer;
   question.className = "question-container";
   question.innerText = questionText;
   quizBoard.appendChild(question);
+
+  // questions[x].incorrect_answers.push(questions[x].correct_answer);
+  // let risposte = questions[x].incorrect_answers;
+  // console.log(risposte);
+  // for (i = 0; i < risposte.length; i++) {
+  //   const answer = document.createElement("div");
+  //   answer.addEventListener("click", (event) => {
+  //     answer.classList.add("selected");
+  //   });
+  //   answer.className = "answers-container";
+  //   let caso = random(risposte.length);
+  //   let risposteText = risposte[caso];
+  //   answer.innerText = risposteText;
+  //   quizBoard.appendChild(answer);
+  // }
+
+  const correctAnswerText = questions[x].correct_answer;
+
   const correctAnswer = document.createElement("div");
   correctAnswer.addEventListener("click", (event) => {
     correctAnswer.classList.add("selected");
